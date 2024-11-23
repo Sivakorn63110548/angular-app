@@ -1,0 +1,65 @@
+<div class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6">
+ <div class="p-6">
+    <div class="flex items-left gap-2">
+      <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+        <span class="text-white font-bold">M</span>
+      </div>
+      <span class="text-xl font-semibold text-indigo-600">MatDash</span>
+    </div>
+  </div>
+
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center bg-gray-50 rounded-lg px-3 py-2">
+        <mat-icon class="text-gray-400">search</mat-icon>
+        <input 
+          type="text" 
+          placeholder="Search..."
+          class="bg-transparent border-none outline-none ml-2 w-48"
+        >
+      </div>
+
+      <!-- Notifications -->
+      <!-- <button mat-icon-button [matMenuTrigger]="notificationMenu">
+        <mat-icon [matBadge]="'1'" matBadgeColor="accent">notifications</mat-icon>
+      </button> -->
+      <mat-menu #notificationMenu="matMenu" class="w-80">
+        <div class="p-4">
+          <div class="text-sm font-medium mb-2">Notifications</div>
+          <div class="text-sm text-gray-600 mb-2">
+            <div class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span>New order received - #123456</span>
+            </div>
+          </div>
+        </div>
+      </mat-menu>
+
+      <!-- Profile -->
+      <!-- <button mat-button [matMenuTrigger]="profileMenu" class="ml-2">
+        <div class="flex items-center gap-2">
+          <img 
+            src="/api/placeholder/32/32"
+            alt="Profile" 
+            class="w-8 h-8 rounded-full"
+          >
+          <span class="hidden md:inline">User Name</span>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+      </button> -->
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
