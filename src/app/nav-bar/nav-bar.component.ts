@@ -2,18 +2,23 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { faAngular, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-nav-bar',
   imports: [
     RouterModule,
     MatIconModule,
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
+  faAngular = faAngular;
+  faFacebook = faFacebookF;
   navItems = [
     {
       label: 'HOME',
@@ -25,92 +30,55 @@ export class NavBarComponent {
       route: '/'
     },
     {
-      label: 'UI COMPONENTS',
+      label: 'Games',
       isHeader: true
     },
     {
-      label: 'Badge',
-      icon: 'bookmark',
+      label: 'Ball',
+      icon: 'sports_soccer',
       route: '/'
     },
     {
-      label: 'Chips',
-      icon: 'clear_all',
+      label: 'Slot',
+      icon: 'casino',
       route: '/'
     },
     {
-      label: 'Lists',
-      icon: 'list',
+      label: 'Bacarete',
+      icon: 'attach_money',
       route: '/'
     },
     {
-      label: 'Menu',
-      icon: 'menu',
+      label: 'Other',
+      icon: 'extension',
       route: '/'
     },
     {
-      label: 'Tooltips',
+      label: 'Data',
+      isHeader: true
+    },
+    {
+      label: 'Forms',
+      icon: 'assignment',
+      route: '/'
+    },
+    {
+      label: 'Tables',
+      icon: 'table_chart',
+      route: '/'
+    },
+    {
+      label: 'Manage',
+      isHeader: true
+    },
+    {
+      label: 'Setting',
+      icon: 'settings',
+      route: '/'
+    },
+    {
+      label: 'About',
       icon: 'info',
-      route: '/'
-    },
-    {
-      label: 'Forms',
-      icon: 'edit',
-      route: '/'
-    },
-    {
-      label: 'Tables',
-      icon: 'table_chart',
-      route: '/'
-    },
-    {
-      label: 'Forms',
-      icon: 'edit',
-      route: '/'
-    },
-    {
-      label: 'Tables',
-      icon: 'table_chart',
-      route: '/'
-    },
-    {
-      label: 'Forms',
-      icon: 'edit',
-      route: '/'
-    },
-    {
-      label: 'Tables',
-      icon: 'table_chart',
-      route: '/'
-    },
-    {
-      label: 'Forms',
-      icon: 'edit',
-      route: '/'
-    },
-    {
-      label: 'Tables',
-      icon: 'table_chart',
-      route: '/'
-    },
-    {
-      label: 'Forms',
-      icon: 'edit',
-      route: '/'
-    },
-    {
-      label: 'Tables',
-      icon: 'table_chart',
-      route: '/'
-    },
-    {
-      label: 'Forms',
-      icon: 'edit',
-      route: '/'
-    },
-    {
-      label: 'Tables',
-      icon: 'table_chart',
       route: '/'
     }
   ];

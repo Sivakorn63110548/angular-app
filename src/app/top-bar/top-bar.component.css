@@ -1,0 +1,24 @@
+.login-btn {
+    display: flex;
+    align-items: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-transform: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #303f9f;
+  }
+  
+  .login-btn .mat-icon {
+    font-size: 20px;
+  }
+  
+  .login-btn span {
+    font-weight: 500;
+  }
+  
