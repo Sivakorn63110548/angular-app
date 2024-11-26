@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TopBarComponent } from "./top-bar/top-bar.component";
+import { NavBarComponent } from "./nav-bar/nav-bar.component";
 @Component({
   selector: 'app-root',
   imports: [
-    HomeComponent,
-    CommonModule
-  ],
+    CommonModule,
+    TopBarComponent,
+    NavBarComponent,
+    RouterModule
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

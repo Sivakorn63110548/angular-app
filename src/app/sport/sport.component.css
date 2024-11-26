@@ -1,0 +1,23 @@
+mat-tab-group {
+    width: 77rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-tab-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.mat-tab-label mat-icon {
+    margin-right: 8px;
+    font-size: 20px;
+    vertical-align: middle;
+}

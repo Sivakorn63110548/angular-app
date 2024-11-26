@@ -16,7 +16,7 @@
       <!-- Notifications -->
       <button mat-icon-button [matMenuTriggerFor]="notificationMenu">
         <mat-icon 
-          [matBadge]="'1'" 
+          [matBadge]="'2'" 
           matBadgeColor="accent"
           aria-hidden="false">
           notifications
@@ -28,6 +28,10 @@
         <div class="p-4">
           <div class="text-sm font-medium mb-2">Notifications</div>
           <div class="text-sm text-gray-600 mb-2">
+            <div class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span>New order received - #123456</span>
+            </div>
             <div class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
               <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
               <span>New order received - #123456</span>

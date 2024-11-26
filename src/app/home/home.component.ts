@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
-import { TopBarComponent } from '../top-bar/top-bar.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-home',
   imports: [
-    NavBarComponent,
     RouterModule,
-    TopBarComponent
-  ],
+    MatTabsModule
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
