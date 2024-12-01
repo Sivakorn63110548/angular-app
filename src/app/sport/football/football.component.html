@@ -1,2 +1,22 @@
-<p>football works!</p>
-<h2>Football Component</h2>
+<mat-form-field appearance="fill" class="mat-form-field-modern">
+    <mat-label>Select Leagues</mat-label>
+    <mat-select [(ngModel)]="selectedCompetition" placeholder="Select a League"
+        (selectionChange)="onCompetitionChange()">
+        <mat-select-trigger>
+            <div *ngIf="selectedCompetition" class="selected-competition flex items-center space-x-3">
+                <img *ngIf="getSelectedCompetition().emblem" [src]="getSelectedCompetition().emblem" width="30"
+                    height="30" alt="{{ getSelectedCompetition().name }}" class="competition-logo rounded-full">
+                <span class="text-sm font-medium">{{ getSelectedCompetition()?.name }}</span>
+            </div>
+        </mat-select-trigger>
+
+        <mat-option *ngFor="let competition of competitions" [value]="competition"
+            class="py-2 px-4 hover:bg-gray-200">
+            <div class="option-content flex items-center space-x-3">
+                <img *ngIf="competition.emblem" [src]="competition.emblem" width="40" height="40"
+                    alt="{{ competition.name }}" class="competition-logo rounded-full">
+                <span class="text-sm">{{ competition.name }}</span>
+            </div>
+        </mat-option>
+    </mat-select>
+</mat-form-field>
