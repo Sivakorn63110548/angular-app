@@ -53,6 +53,6 @@ export class FootballComponent {
   }
 
   getSelectedCompetition() {
-    return this.competitions.find(competition => competition.id === this.selectedCompetition);
+    return this.competitions.find(competition => competition.id === this.selectedCompetition.id);
   }
 }
