@@ -63,7 +63,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 300;
 }
 
 .spinner {
@@ -83,4 +83,24 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+@keyframes dialogAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-dialog {
+  animation: dialogAppear 0.3s ease-out;
+}
+
+.fixed {
+  z-index: 9999 !important;
 }

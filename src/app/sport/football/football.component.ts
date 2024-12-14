@@ -29,11 +29,6 @@ export class FootballComponent {
 
   getFilteredCompetitions(): void {
     const url = 'http://api.football-data.org/v4/competitions';
-    const params = {
-      areas: '2072',
-      season: '2023',
-      code: 'PL'
-    };
     const headers = { 'X-Auth-Token': '7d1ac53f18e94d93806f9dca9e5b4f28' };
 
     this.http.get(url, { headers }).subscribe({

@@ -7,9 +7,7 @@
         {{ item.label }}
       </div>
 
-      <a *ngIf="!item.isHeader"
-        [routerLink]="item.route"
-        routerLinkActive="bg-indigo-50 text-indigo-600"
+      <a *ngIf="!item.isHeader" [routerLink]="item.route" routerLinkActive="bg-indigo-50 text-indigo-600"
         [routerLinkActiveOptions]="{ exact: true }"
         class="nav-item flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
         <mat-icon class="text-gray-400">{{item.icon}}</mat-icon>
@@ -29,14 +27,35 @@
 
 
       <h3 class="text-base font-semibold mb-2 text-gray-700">© Angular App . Crafted with by BookDev</h3>
-      <a href="https://www.facebook.com/sivakorn.tanyupak.7/" target="_blank" rel="noopener noreferrer"
+      <a (click)="showModal_follow()" target="_blank" rel="noopener noreferrer"
         class="w-full bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition-colors flex items-center justify-center py-2">
         <fa-icon [icon]="faFacebook" class="fa-1x"></fa-icon>&nbsp;&nbsp;&nbsp;&nbsp;Follow Me
       </a>
+
+      <div *ngIf="isModalVisible"
+        class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out">
+        <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all animate-dialog z-50">
+          <button (click)="closeModal()" class="absolute top-0 right-0 m-4 text-black text-2xl font-bold">X</button>
+          <a href="https://www.instagram.com/bookkkk_7" target="_blank" rel="noopener noreferrer">
+            <img src="assets/bookkkk_7_qr.png" alt="Your Image" class="max-w-xs max-h-xs mx-auto" />
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
 <div *ngIf="isLoading" class="loading-overlay">
-  <div class="spinner"></div>
+  <mat-spinner></mat-spinner>
 </div>
+<nav>
+  <ul>
+    <li *ngFor="let item of navItems" [class.header]="item.isHeader">
+      <a *ngIf="!item.isHeader" [routerLink]="item.route">
+        <mat-icon>{{ item.icon }}</mat-icon> {{ item.label }}
+      </a>
+      <span *ngIf="item.isHeader">{{ item.label }}</span>
+    </li>
+  </ul>
+</nav>

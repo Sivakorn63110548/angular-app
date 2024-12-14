@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { Router, RouterModule, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAngular, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { log } from 'console';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,7 +14,8 @@ import { faAngular, faFacebookF } from '@fortawesome/free-brands-svg-icons';
     MatIconModule,
     CommonModule,
     FontAwesomeModule,
-    RouterModule
+    RouterModule,
+    MatProgressSpinnerModule
   ],
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
@@ -21,6 +24,7 @@ export class NavBarComponent {
   faAngular = faAngular;
   faFacebook = faFacebookF;
   isLoading = false;
+  isModalVisible: boolean = false;
 
   navItems = [
     { label: 'HOME', isHeader: true },
@@ -44,18 +48,21 @@ export class NavBarComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.isLoading = true;
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 100);
       } else if (
         event instanceof NavigationEnd || 
         event instanceof NavigationCancel || 
         event instanceof NavigationError
       ) {
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 100);
+        this.isLoading = false;
       }
     });
+  }
+
+  showModal_follow() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
   }
 }

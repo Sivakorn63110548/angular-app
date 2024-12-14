@@ -23,7 +23,7 @@ body {
     height: 60px;
     background-color: #333;
     color: white;
-    z-index: 1000;
+    z-index: 300;
 }
 
 .main-content {
