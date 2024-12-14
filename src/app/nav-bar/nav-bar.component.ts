@@ -3,7 +3,7 @@ import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationErr
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faAngular, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { log } from 'console';
 
@@ -22,7 +22,7 @@ import { log } from 'console';
 })
 export class NavBarComponent {
   faAngular = faAngular;
-  faFacebook = faFacebookF;
+  faInstagram = faInstagram;
   isLoading = false;
   isModalVisible: boolean = false;
 
