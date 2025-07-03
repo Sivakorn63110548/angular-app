@@ -36,7 +36,7 @@ A responsive, modern **Admin Dashboard** built with **Angular** and styled using
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/angular-admin-dashboard.git
+git clone https://github.com/Sivakorn63110548/angular-app
 cd angular-admin-dashboard
 
 # Install dependencies
