@@ -20,6 +20,7 @@ A responsive, modern **Admin Dashboard** built with **Angular** and styled using
 ## 📸 Preview
 
 [> _You can add dashboard screenshots here to showcase UI_](https://bookdev-angular.vercel.app/sport)
+![Uploading image.png…]()
 
 ---
 
